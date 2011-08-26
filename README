@@ -1,0 +1,19 @@
+This is the implementation of the Ahsay Backup client v5.5 (or less) restoration process.
+
+I have decided to dig into the client since our company had to restore 50Gb (1.5M files) of data in 4 hours.
+
+This tool is capable of doing more than the actual requirement for us. It also enables you to restore only the files that are new or have been changed since the last backup using the file modification date.
+
+It also has some useful information and API's for making an alternative client, though it's not completed and possibly will not be updated by me, but I'd be quite happy to see your commits to the code, since everyone who uses the Ahsay software GUI knows how slow it is.
+
+This implementation is faster at restoring than the original client v5.5 and v6.x (yes, even faster than their original multi-threaded implementation).
+
+The drawback of this code is the fact, that with the release of v6 - Ahsay has changed the algorithm of encryption key generation based on the user encryption password, so everything encrypted with v6 will fail to restore. If you have any questions regarding where and how to get the actual code - feel free to ask me.
+
+Copyright notice: there is nothing related to Ahsay in this client, excepting the URL structure of the server and the encryption key constants.
+
+Main script is:
+./Restore.py - restores everything from a certain directory
+./listBackupFiles.py - lists the files in a certain directory
+./AhsayAPI - the encryption implementation and some tools for the Restore.py to work fast enough
+
