@@ -17,3 +17,7 @@ Main script is:
 ./listBackupFiles.py - lists the files in a certain directory
 ./AhsayAPI - the encryption implementation and some tools for the Restore.py to work fast enough
 
+Usage notice:
+- Libraries:
+ * lxml
+ * Crypto
